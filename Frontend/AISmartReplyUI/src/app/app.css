@@ -1,0 +1,156 @@
+.container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  opacity: 0.75;
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.reply-section {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.reply-section p {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.copy-message {
+  color: #15803d;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.reply-section textarea {
+  border-color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+  line-height: 1.5;
+  resize: vertical;
+}
+
+button {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  transition: background-color 0.2s ease;
+}
+
+p.character-count {
+  text-align: right;
+  color: #64748b;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+
+p.error-message {
+  color: #b91c1c !important;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+p.character-count.limit-warning {
+  color: red !important;
+  font-weight: bold;
+}
+
+p.success-message {
+  color: #15803d !important;
+  background-color: #dcfce7;
+  border: 1px solid #bbf7d0;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+button.clear-button {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+button.clear-button:hover:not(:disabled) {
+  background-color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

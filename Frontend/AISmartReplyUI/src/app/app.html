@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>SmartReply AI</h1>
+  <p class="subtitle">
+  Generate clear and professional customer replies in seconds.
+</p>
+  
+  <label>Customer Message</label>
+  <textarea
+    [(ngModel)]="customerMessage"
+     (ngModelChange)="errorMessage = ''; generatedReply = ''; copyMessage = ''; successMessage=''"
+    maxlength="1000"
+    placeholder="Enter customer message">
+  </textarea>
+ <p class="character-count"
+   [class.limit-warning]="customerMessage.length >= 900">
+  {{ customerMessage.length }} / 1000 characters
+</p>
+
+  <label>Tone</label>
+  <select [(ngModel)]="selectedTone">
+    <option value="Professional">Professional</option>
+    <option value="Friendly">Friendly</option>
+    <option value="Polite">Polite</option>
+  </select>
+
+  <label>Reply Length</label>
+  <select [(ngModel)]="selectedReplyLength">
+    <option value="Short">Short</option>
+    <option value="Medium">Medium</option>
+    <option value="Detailed">Detailed</option>
+  </select>
+
+  <br/> 
+  <button type="button" (click)="generateReply()" [disabled]="isGenerating || customerMessage.trim().length<3">
+ {{ isGenerating ? 'Generating...' : 'Generate Reply' }}
+</button>
+@if (isGenerating) {
+  <p>Generating reply, please wait...</p>
+}
+@if (errorMessage) {
+  <p class="error-message">{{ errorMessage }}</p>
+}
+@if (successMessage) {
+  <p class="success-message">{{ successMessage }}</p>
+}
+<div class="reply-section">
+  <h3>AI Generated Reply</h3>
+<textarea
+  [(ngModel)]="generatedReply"
+  (ngModelChange)="copyMessage = ''"
+  rows="5"
+  placeholder="Your generated reply will appear here...">
+</textarea>
+  <button
+  type="button"
+  (click)="copyReply()"
+  [disabled]="!generatedReply">
+  Copy Reply
+</button>
+@if (copyMessage) {
+  <p class="copy-message">{{ copyMessage }}</p>
+}
+<button type="button" 
+  class="clear-button" (click)="clearForm()" [disabled]="isGenerating">
+  Clear
+</button>
+</div>
+</div>

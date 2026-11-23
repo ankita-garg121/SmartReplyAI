@@ -1,0 +1,6 @@
+@AISmartReply_HostAddress = http://localhost:5137
+
+GET {{AISmartReply_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
