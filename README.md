@@ -113,3 +113,14 @@ Open:
 ## Project Status
 
 Functional local prototype. Further improvements and deployment are planned.
+
+## Application Screenshots
+
+### Home Screen
+![Home Screen](Screenshots/Home.png)
+
+### Generated Reply
+![Generated Reply](Screenshots/GeneratedReply.png)
+
+### Editable Reply
+![Editable Reply](Screenshots/EditableReply.png)
